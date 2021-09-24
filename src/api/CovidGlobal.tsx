@@ -8,8 +8,6 @@ interface ICovidCountries {
   TotalConfirmed: number;
   NewDeaths: number;
   TotalDeaths: number;
-  NewRecovered: number;
-  TotalRecovered: number;
   Date: string;
   Global: any[];
 }
@@ -44,27 +42,17 @@ const CovidSummary: React.FC<{}> = (props) => {
         </Card>
         <Table.Body>
           <Table.Head>
-            <Table.TextCell>NewConfirmed</Table.TextCell>
-            <Table.TextCell>TotalConfirmed</Table.TextCell>
-            <Table.TextCell>NewDeaths</Table.TextCell>
-            <Table.TextCell>TotalDeaths</Table.TextCell>
-            <Table.TextCell>NewRecovered</Table.TextCell>
-            <Table.TextCell>TotalRecovered</Table.TextCell>
+            <Table.TextCell>New Confirmed</Table.TextCell>
+            <Table.TextCell>New Deaths</Table.TextCell>
+            <Table.TextCell>Total Confirmed</Table.TextCell>
+            <Table.TextCell>Total Deaths</Table.TextCell>
           </Table.Head>
           <Table.Body>
             <Table.Row>
               <Table.TextCell> {global && global.NewConfirmed} </Table.TextCell>
               <Table.TextCell> {global && global.NewDeaths} </Table.TextCell>
-              <Table.TextCell> {global && global.NewRecovered} </Table.TextCell>
-              <Table.TextCell>
-                {" "}
-                {global && global.TotalConfirmed}{" "}
-              </Table.TextCell>
+              <Table.TextCell>{global && global.TotalConfirmed}</Table.TextCell>
               <Table.TextCell> {global && global.TotalDeaths} </Table.TextCell>
-              <Table.TextCell>
-                {" "}
-                {global && global.TotalRecovered}{" "}
-              </Table.TextCell>
             </Table.Row>
           </Table.Body>
         </Table.Body>
