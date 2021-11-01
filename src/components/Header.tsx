@@ -1,29 +1,24 @@
-import React from "react";
-import { Navbar, Container } from "react-bootstrap";
-import logo from "../logo.png";
-// import DropdownCountry from "./DropdownCountry";
+import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
 
-interface Props {}
+interface Props {
+  siteName?: string;
+  image?: string;
+}
 
-const Header = (props: Props) => {
+const Header: React.StatelessComponent<Props> = ({ siteName, image }) => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg='dark' variant='dark'>
         <Container>
           <Navbar.Brand>
             <img
-              alt="covid_baby"
-              src={logo}
-              className="d-inline-block align-top"
-            />{" "}
-            {process.env.REACT_APP_WEB_SITE_TITLE}
+              alt='covid_baby'
+              src={image}
+              className='d-inline-block align-top'
+            />{' '}
+            {siteName}
           </Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            {/* <Navbar.Text>
-              <DropdownCountry />
-            </Navbar.Text> */}
-          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
