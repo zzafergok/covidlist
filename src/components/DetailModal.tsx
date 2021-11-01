@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Modal, Table } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Button, Modal, Table } from 'react-bootstrap';
 
 interface IProps {
   itemCounty: string;
@@ -20,36 +20,42 @@ const DetailModal: React.FC<IProps> = ({
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const tableRowName: string[] = [
+    'New Confirmed',
+    'New Deaths',
+    'Total Confirmed',
+    'Total Deaths',
+  ];
+
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant='primary' onClick={handleShow}>
         Country Detail
       </Button>
 
-      <Modal show={show} onHide={handleClose} size="lg" centered>
+      <Modal show={show} onHide={handleClose} size='lg' centered>
         <Modal.Header>
           <Modal.Title>{itemCounty}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Table responsive="sm">
+          <Table responsive='sm'>
             <thead>
               <tr>
-                <th>New Confirmed</th>
-                <th>New Deaths</th>
-                <th>Total Confirmed</th>
-                <th>Total Deaths</th>
+                {tableRowName.map((item: any, index: number) => (
+                  <th key={index}>{item}</th>
+                ))}
               </tr>
             </thead>
             <tbody>
-              <td style={{ paddingLeft: "3rem" }}>{itemNewConfirmed}</td>
-              <td style={{ paddingLeft: "3rem" }}>{itemNewDeaths}</td>
-              <td style={{ paddingLeft: "3rem" }}>{itemTotalConfirmed}</td>
-              <td style={{ paddingLeft: "3rem" }}>{itemTotalDeaths}</td>
+              <td style={{ paddingLeft: '3rem' }}>{itemNewConfirmed}</td>
+              <td style={{ paddingLeft: '3rem' }}>{itemNewDeaths}</td>
+              <td style={{ paddingLeft: '3rem' }}>{itemTotalConfirmed}</td>
+              <td style={{ paddingLeft: '3rem' }}>{itemTotalDeaths}</td>
             </tbody>
           </Table>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant='primary' onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
