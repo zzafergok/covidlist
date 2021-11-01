@@ -1,0 +1,141 @@
+:root{
+ --primary-color: rgb(209, 138, 6);
+ --primary-box-shadow: 0 0 0 0.25rem rgb(209, 138, 6);
+}
+
+body {
+  background-color: #2b7463
+}
+
+.d-contents{
+  display: contents;
+}
+
+.top-1{
+  top: 1px;
+}
+
+.top-2{
+  top: 2px;
+}
+
+.top-3{
+  top: 3px;
+}
+
+.top-4{
+  top: 4px;
+}
+
+.top-5{
+  top: 5px;
+}
+
+.card{
+  background-color: #1b534636
+}
+
+.card-title{
+  color:floralwhite
+}
+
+.card-text{
+  color:rgb(221, 146, 6)
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus{
+  box-shadow: var(--primary-box-shadow);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dropdown-item:hover{
+  background-color: var(--primary-color);
+}
+
+@media all and (max-width: 374px){
+  .home-image{
+    width: 275px
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px){
+  .home-image{
+    width: 330px
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 574px){
+  .home-image{
+    width: 380px
+  }
+}
+
+@media all and (min-width: 575px) and (max-width: 767px){
+  .home-image{
+    width: 495px
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px){
+  .home-image{
+    width: 675px
+  }
+
+  .card-position{
+    position: relative;
+    left: 38px;
+  }
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px){
+  .home-image{
+    width: 915px
+  }
+
+  .card-position{
+    position: relative;
+    left: 80px;
+  }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1399px){
+  .home-image{
+    width: 1095px
+  }
+
+  .card-position{
+    position: relative;
+    left: 115px;
+  }
+}
+
+@media all and (min-width: 1400px){
+  .home-image{
+    width: 1275px
+  }
+
+  .card-position{
+    position: relative;
+    left: 140px;
+  }
+}
